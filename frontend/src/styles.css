@@ -1,0 +1,1855 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 100vw; 
+  height: 100vh;
+}
+html{
+  width: 100vw; 
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+#root{
+  width: 100vw; 
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/*-----------------------------------------------Login page---------------------------------------------*/
+.loginPage{
+  background: linear-gradient(120deg,#2980b9, #8e44ad);
+  margin: 0;
+  padding: 0;
+  width: 100vw; 
+  height: 100vh; 
+  overflow: hidden;
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.center h1{
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input{
+  width: 100%;
+  padding: 0 5px; 
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0; 
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.pass:hover{
+  text-decoration: underline;
+}
+#submitButton{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+#submitButton:hover{
+  border-color: #2691d9;
+  transition: .5s;
+  cursor: pointer;
+}
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+.signup_link a{
+  color: #2691d9;
+  text-decoration: none;
+}
+.signup_link a:hover{
+  text-decoration: underline;
+}
+
+
+/*-----------------------------------------------Login page---------------------------------------------*/
+
+
+/*-----------------------------------------------NavBar---------------------------------------------*/
+
+
+
+.nav li {
+  list-style: none;
+}
+.nav a:hover {
+  color: #00C4FF;
+}
+.nav a {
+  text-decoration: none;
+  color: rgb(204, 204, 204);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background: rgb(0, 33, 65);
+  /* z-index: 5; */
+}
+.nav__brand {
+  color: #DDE6ED;
+  margin: 0;
+}
+
+#logoutbtn{
+  /* background-color: #79E0EE; */
+  color:  white;
+  padding: 5px;
+  border-radius: 5px;
+  /* background-image: linear-gradient(180deg, #0B2447, #0B2447); */
+  background-color: transparent;
+  border-width: 0.5px;
+  border-color: white;
+  cursor: pointer;
+}
+
+#logoutbtn:hover{
+  color:  black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  border-width: 0.5px;
+  border-color: black;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.nav__toggler {
+  display: none;
+}
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: rgb(204, 204, 204);
+  transition: 0.3s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    height: 93vh;
+    width: 50vw;
+    background: rgb(0, 33, 65);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+    /* scroll-behavior: smooth; */
+    z-index: 5;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+  }
+}
+/* Active Class */
+.nav__active {
+  transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
+}
+
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* .mainCourseDiv{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+} */
+
+.courseLeftDiv{
+  margin: 0;
+  width: 20%;
+  background-color: plum;
+  z-index: 5;
+}
+
+.show{
+  margin: 0;
+  width: 20%;
+  background-color: plum;
+  z-index: 5;
+}
+
+.courseRightDiv{
+  width: 80%;
+  /* vertical-align: top; */
+  background-color: rgb(0, 33, 65);
+}
+
+
+
+.teacherPhotoDiv{
+  margin: 0;
+  height: 40%;
+  background-color:rgb(0, 33, 65);
+  position: relative;
+  text-align: center;
+}
+
+.courseTeacherIcon{
+margin: 0;
+border-radius: 100%;
+position: absolute;
+top: 35%;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.techerName{
+  margin: 0;
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #DDE6ED;
+}
+
+.courseruler{
+  margin: 0;
+  height: 1px;
+  width: 80%;
+  background-color: #DDE6ED;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.courseLeftButtonDiv{
+  height: 60%;
+  position: relative;
+  align-items: center;
+  
+  /* background-color: #00C4FF; */
+  background-image: linear-gradient(180deg, rgb(0, 33, 65), #00C4FF);
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+}
+
+
+.courseLeftButtonContainer{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.courseLeftButton{
+  width: 95%;
+  padding: 20px 5px;
+  background-color: transparent;
+  border-color: #DDE6ED;
+  border-width: 0.5px;
+  border-radius: 8px;
+  margin: 5px;
+  color: #DDE6ED;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* chat start */
+
+.mainCourseDiv {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.toggleButton{
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .courseLeftDiv {
+    /* Adjust the width and other styles for the left div on tablet screens */
+    width: 30%;
+  }
+
+  .courseRightDiv {
+    /* Adjust the width and other styles for the right div on tablet screens */
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+
+  /* .courseLeftDiv {
+    display: none;
+    width: 50%;
+    z-index: 5;
+  } */
+
+  .toggleButton{
+    display: inline;
+  }
+
+  .courseRightDiv {
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    /* Use full width for the right div on mobile screens */
+  }
+
+  .teacherPhotoDiv{
+    margin: 0;
+    height: 40%;
+    background-color:rgb(0, 33, 65);
+    /* position: relative; */
+    text-align: center;
+    /* margin-left: 10%; */
+  }
+
+  .toggleButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 6;
+    /* Position the toggle button at the top left corner */
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* Styles for the toggle button icon */
+  }
+
+  .show {
+    display: none; 
+    /* Show the left div when the showLeftDiv state is true */
+  }
+  /* .courseLeftDiv .show{
+    display: block;
+  } */
+}
+
+/* Styles for tablet screens */
+/* @media screen and (min-width: 769px) and (max-width: 1024px) {
+  .courseLeftDiv {
+    width: 30%;
+  }
+
+  .courseRightDiv {
+    width: 100%;
+  }
+} */
+
+/* chat end */
+
+.courseLeftButton:hover{
+  width: 95%;
+  padding: 20px 5px;
+  background-color: rgb(0, 33, 65);
+  font-size: 1.05rem;
+  border-color: #DDE6ED;
+  border-width: 0.5px;
+  border-radius: 8px;
+  margin: 5px;
+  color: #DDE6ED;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.courseUpperDiv{
+  height: 12%;
+  background-color: rgb(0, 33, 65);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.courseLikeBtn{
+  right: 2%;
+  top: 4%;
+  position: absolute;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+.courseLikeBtn:hover{
+  right: 2%;
+  top: 4%;
+  position: absolute;
+  background-color: #DDE6ED;
+  border: none;
+  border-radius: 10px;
+}
+.courseLikeBtn:active{
+  right: 2%;
+  top: 4%;
+  position: absolute;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  scale: 1.2;
+}
+
+.courseVideoList{
+  height: 88%;
+  /* background-color: #4FBDBA; */
+  background-image: linear-gradient(180deg, rgb(0, 33, 65), #00C4FF);
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-top-left-radius: 15px;
+}
+
+.courseVideoList::-webkit-scrollbar {
+    display: none;
+}
+
+.courseUpperDiv h1{
+  color: #DDE6ED;
+  margin: 0;
+}
+
+
+.videoCard{
+  height: 69px;
+  background-color: white;
+  margin: 22px;
+  padding: 5px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 2px 2px 3px black;
+  display: flex;
+}
+.videoCard:hover{
+  height: 69px;
+  background-color: white;
+  margin: 22px;
+  padding: 5px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 2px 2px 20px black;
+  transform: scale(1.004);
+  
+}
+
+#videoicon{
+margin: 0;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+left: 0px;
+background-color: transparent;
+border: none;
+height: 100%;
+width: 8%;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+}
+
+.videoCard h3{
+  margin: 0;
+  width: 50%;
+  display: inline-block;
+  position: absolute; 
+  top: 50%;
+  left:10%;
+  transform: translateY(-50%);
+}
+.videoCard p{
+  margin: 0;
+  width: 50%;
+  font-size: 0.7rem;
+  color:#a6a6a6;
+  display: inline-block;
+  position: absolute; 
+  top: 80%;
+  left:10%;
+  transform: translateY(-50%);
+}
+
+#playicon{
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 8%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+}
+
+#playicon:hover{
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 8%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  /* background-color: #EB1D36;
+  background-color: #F24C4C; */
+  cursor: pointer;
+  background-image: linear-gradient(180deg, #E80F88, #EB1D36)
+}
+/* .courseLowerDiv{
+  margin: 0;
+  background-color: turquoise;
+} */
+
+/* .courseLowerDiv p{
+  margin: 0; 
+  padding: 3px;
+  text-align: center;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.homeDiv{
+  margin: 0;
+  padding: 0;
+  width: 100vw; 
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.homeUpperDiv{ 
+  margin: 0;
+  /* padding: 11px; */
+  /* padding: 11px; */
+  background-color: turquoise;
+  text-align: right;
+
+  height: 10vh;
+  width: 100vw;
+}
+
+.homeButton{
+  /* margin: 5px;
+  padding: 2px; */
+}
+
+.homeCoursesArea{
+  margin: 0;
+  /* background: linear-gradient(120deg,#79E0EE, #1D267D); */
+  background-image: linear-gradient(180deg, rgb(0, 33, 65), #00C4FF);
+  height: 92vh;
+  width: 100vw;
+  /* padding-top: 5px; */
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* height: 448px; */
+}
+
+.homeCoursesArea::-webkit-scrollbar {
+display: none;
+}
+
+.homeLowerDiv{
+  margin: 0;
+  background-color: turquoise;
+  text-align: center;
+  position: relative;
+  height: 10vh;
+}
+
+.homeCopyRight{
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  width: 10%;
+}
+
+.homeCopyRight p{
+  margin: 0;
+  padding: 3px;
+}
+
+.homeLowerButton{
+  position: absolute;
+  right: 20px;
+  top: 40%;
+  cursor: pointer;
+}
+
+.homeCard{
+  margin: 10px;
+  padding: 3px;
+  height: 60px;
+  width: 100%;
+  background-color: dimgray;
+}
+
+/*--------------------------HOMECARD---------------------------------*/
+
+/* *{
+  margin: 0px;
+  padding: 0px;
+ }
+ body{
+  font-family: arial;
+ }
+ .main{
+ 
+  margin: 2%;
+ } */
+ 
+ .card{
+      width: 22.6%; 
+      height: 43%;
+      position: relative;
+      display: inline-block;
+      box-shadow: 2px 2px 5px black;
+      border-radius: 30px; 
+      background-color: white;
+      text-align: center;
+      padding-bottom: 5px;
+      /* padding-top: 5px; */
+      /* padding-left: 3px; */
+      /* padding-right: 3px; */
+      margin: 20px;
+      margin-top: 12px;
+     }
+     .card:hover{ 
+      width: 22.6%; 
+      height: 43%;
+      display: inline-block;
+      box-shadow: 2px 2px 30px black;
+      border-radius: 30px; 
+      transform: scale(1.02);
+      background-color: white;
+      text-align: center;
+      padding-bottom: 5px;
+      /* padding-top: 5px; */
+      /* padding-left: 3px; */
+      /* padding-right: 3px; */
+      margin: 20px;
+      margin-top: 12px;
+     }
+  
+     .description{
+      margin-top: 0;
+      margin-bottom: 4px;
+     }
+     .courseFounder{
+      margin-bottom: 5px;
+      margin-top: 0;
+     }
+ 
+ .image img{
+   width: 50%;
+   height: 50%;
+   position: absolute;
+   left: 50%;
+   top: 2%;
+   transform: translateX(-50%);
+   background-color: transparent;
+   /* border-radius: 100%; */ 
+   vertical-align: top;
+   /* display: none; */
+  }
+
+  .card hr{
+    border-width: 0px;
+    width: 100%;
+    height: 52%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #3C2317;
+    /* background-image: linear-gradient(180deg, #884A39, #C38154); */
+    /* background-image: linear-gradient(180deg, #DDE6ED, #DDE6ED); */
+    position: relative;
+    top: 48%;
+    }
+
+  /* .image{
+    margin: 0;
+      text-align: center;
+      height: 45%;
+      width: 60%;
+      margin: 0;
+      border-top-right-radius: 30px;
+   border-top-left-radius: 30px; 
+  } */
+ 
+ .title{
+  
+   text-align: center;
+   position: absolute;
+   width: 100%;
+   height: 28%;
+   top: 53%;
+   left: 50%;
+   transform: translateX(-50%);
+   /* padding: 10px; */
+   margin-top: 4px;
+   /* margin-bottom: 4px; */
+   font-family: Verdana, sans-serif;
+  }
+ 
+ .card h1{
+   font-size: 15px;
+   margin:0;
+   margin-top: 5px;
+   height: 100%;
+   color: white;
+  }
+ 
+ .des{
+   text-align: center;
+  height: 25%;
+  border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+   font-size: 10px;
+ }
+ .card button{
+   background-color: transparent;
+   border: 0.3px solid white;
+   color: white;
+   border-radius: 4px;
+   padding:8px;
+   position: absolute;
+   bottom: 3%;
+   left: 50%;
+   transform: translateX(-50%);
+   cursor: pointer;
+ }
+ .card button:hover{
+   background-color: white;
+   color: black;
+   transition: .5s;
+   cursor: pointer;
+   position: absolute;
+   bottom: 3%;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+
+/*--------------------------------------------------------------------*/
+
+
+
+
+
+.insertVideosShowArea{
+margin: 0;
+}
+
+.insertUpperDiv{
+height: 12%;
+background-color: rgb(0, 33, 65);
+display: flex;
+position: relative;
+/* align-items: center; */
+/* justify-content: space-around; */
+}
+
+.insertUpperBrand{
+width: 37%;
+text-align: left;
+height: 100%;
+position: relative;
+}
+.insertUpperBrand h2{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.insertUpperDiv button{
+height: 100%;
+width: 32%;
+background-color: transparent;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.insertUpperButtonDiv{
+position: absolute; 
+right: 2%;
+width: 30%;
+height: 100%;
+text-align: right;
+}
+
+.insertFormDiv{
+margin: 0;
+height: 100%;
+background-color: #F0F0F0;
+box-shadow: 2px 2px 50px black;
+border-radius: 15px;
+}
+.insertFormDiv h1{
+margin: 0;
+text-align: center;
+margin-bottom: 20%;
+padding-top: 10px;
+}
+
+.form{
+margin: 0;
+height: 98%;
+padding: 5px;
+width: 36%;
+}
+
+.insertFormDiv input{
+margin: 0;
+
+}
+
+.insertArea{
+margin: 0;
+display: flex;
+height: 88%;
+width: 100%;
+}
+
+.inputsInsertPage{
+margin: 30px 10px;
+}
+
+.fileinput{
+margin: 30px 10px;
+}
+
+.inputsInsertPage label{
+margin: 0;
+color: black;
+}
+.inputsInsertPage input{
+padding: 0 5px;
+font-size: 16px;
+height: 40px;
+width: 80%;
+border: none;
+border-radius: 10px;
+margin-left: 15px;
+outline: none;
+}
+
+.inserFormButtonDiv{
+height: 36%;
+width: 100%;
+position: relative;
+}
+
+.btnsInsert{
+position: absolute;
+height:100%;
+width: 100%;
+text-align: center;
+}
+.btnsInsert button{
+vertical-align: top;
+background-color: #EEEEEE;
+box-shadow: 2px 2px 5px black;
+border: none;
+border-radius: 10px;
+height: 40px;
+width: 50%;
+margin: 2%;
+cursor: pointer;
+}
+.btnsInsert button:hover{
+vertical-align: top;
+background-color: #B20600;
+box-shadow: 2px 2px 5px black;
+border: none;
+border-radius: 10px;
+height: 40px;
+width: 50%;
+margin: 2%;
+transition: 0.5s;
+cursor: pointer;
+}
+
+.videoBuffer{
+width: 64%;
+overflow-y: auto;
+overflow-x: hidden;
+text-align: center;
+color: white;
+}
+
+.videoBuffer h2{
+margin: 0;
+text-align: center;
+}
+
+.tutorialContainer{
+position: relative;
+}
+
+.tutorialContainer hr{
+width: 70%;
+}
+
+.tutorialContainer button{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+right: 6%;
+background-color: white;
+box-shadow: 2px 2px 5px black;
+border-radius: 10px;
+border: none;
+height: 15%;
+width: 10%;
+border: none;
+cursor: pointer;
+}
+
+.tutorialContainer button:hover{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+right: 6%;
+background-color: #B20600;
+box-shadow: 2px 2px 20px black;
+border-radius: 10px;
+border: none;
+height: 15%;
+width: 10%;
+border: none;
+transition: 0.2s;
+cursor: pointer;
+}
+
+.videoBuffer::-webkit-scrollbar {
+display: none;
+}
+
+
+/*--------------------------------------------------- PLAY-------------------------------------------------------------------*/
+.play{
+height: 100vh;
+overflow-y: auto;
+overflow-x: hidden;
+position: relative;
+}
+
+.play::-webkit-scrollbar {
+display: none;
+}
+
+.videoDiv{
+width: 70%;
+height: 100%;
+}
+
+.videoAndNotesDiv{
+height: 100vh;
+display: flex;
+}
+
+.videoDivUpper{
+height: 7%;
+position: relative;
+background-color: rgb(0, 33, 65);
+}
+
+.videoArea{
+height: 83.6%;
+}
+
+.videoLowerDiv{
+height: 9.4%;
+position: relative;
+background-color:  rgb(0, 33, 65);
+}
+
+.videoUpperButtonContainer{
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+position: absolute;
+width: 100%;
+text-align: center;
+}
+.videoUpperButtonContainer h2{
+margin: 0;
+color: #F0F0F0;
+}
+
+.videoLowerButtonContainer{
+top: 50%;
+transform: translateY(-50%);
+right: 1%;
+width: 86%;
+height: 90%;
+position: absolute;
+}
+.videoLowerButtonContainer button{
+height: 100%;
+vertical-align: top;
+margin: 0 5%;
+background-color: transparent;
+color: white;
+border: none;
+font-size:medium;
+cursor: pointer;
+}
+.videoLowerButtonContainer button:hover{
+height: 100%;
+vertical-align: top;
+margin: 0 5%;
+background-color:#79E0EE;
+color: black;
+border: none;
+font-size:medium;
+transition: 0.5s;
+cursor: pointer;
+}
+
+#captureIcon{
+background-color: transparent;
+border: none;
+cursor: pointer;
+}
+#captureIcon:hover{
+background-color: transparent;
+border: none;
+rotate: 180deg;
+transition: 0.5s;
+transform: scale(1.2);
+cursor: pointer;
+}
+
+/* #homeIcon{
+background-color: transparent;
+border: none;
+}
+
+#homeIcon{
+background-color: transparent;
+border: none;
+} */
+
+.noteDivUpper{
+height: 7%;
+position: relative;
+background-color: #B01E68;
+color: #F0F0F0;
+
+}
+
+.noteDivUpper h2{
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+margin: 0;
+}
+
+.notesArea{
+height: 83.6%;
+background-color: #B01E68;
+}
+
+.noteLowerDiv{
+height: 9.4%;
+position: relative;
+background-color: #B01E68;
+}
+
+.notesUpperButtonContainer{
+right: 0px;
+top: 0px;
+position: absolute;
+}
+
+.notesLowerButtonContainer{
+top: 50%;
+transform: translateY(-50%);
+right: 5%;
+position: absolute;
+height: 100%;
+}
+.notesLowerButtonContainer button{
+margin: 0;
+background-color: transparent;
+border: none;
+outline: none;
+height: 100%;
+width: 60px;
+cursor: pointer;
+}
+.notesLowerButtonContainer button:hover{
+margin: 0;
+background-color: transparent;
+border: none;
+outline: none;
+background-color: white;
+transition: 0.5s;
+height: 100%;
+cursor: pointer;
+}
+
+
+.noteDiv{
+width: 30%;
+height: 100%;
+}
+
+
+.noteHeading{
+margin: 0;
+text-align: center;
+}
+
+.txt{
+resize: none;
+height: 100%;
+width: 100%;
+background-color: #EEEEEE;
+/* border-radius: 20px; */
+border: black;
+border-width: 20px;
+font-size:1em; 
+font-family:"Ubuntu Light","Ubuntu","Ubuntu Mono","Segoe Print","Segoe UI";
+outline: none;
+}
+
+
+.txt::-webkit-scrollbar {
+display: none;
+}
+
+.PlayImageCollection{
+display: flex;
+overflow-x: scroll;
+width: 100%;
+white-space:nowrap;
+}
+
+.PlayImageAndButtonContainer{
+width: 100%;
+height: 100%;
+margin: 5px 5px;
+display: inline-block;
+padding-top: 2px;
+}
+
+
+.txt::-webkit-scrollbar {
+display: none;
+display: inline-block;
+}
+
+.normal{
+display: none;
+position: absolute;
+}
+
+.showmode{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background-color: black;
+transition: 0.5s display;
+/* width: 60%;
+height: 60%; */
+}
+
+#escapeSlideshow{
+position:absolute;
+right: 5px;
+top: 2px;
+background-color: transparent;
+border: none;
+z-index: 2;
+cursor: pointer;
+}
+
+.imageContainerPlay{
+text-align: center;
+}
+.imageContainerPlay button{ 
+  display: block;
+margin-bottom: 5px;
+outline: none;
+background-color: white;
+border: none;
+cursor: pointer;
+}
+
+
+
+/*-------------------------------UPDATE---------------------------------------------*/
+
+.updateCard{
+height: 69px;
+background-color: white;
+margin: 22px;
+padding: 5px;
+border-radius: 15px;
+position: relative;
+box-shadow: 2px 2px 3px black;
+display: flex;
+}
+.updateCard:hover{
+height: 69px;
+background-color: white;
+margin: 22px;
+padding: 5px;
+border-radius: 15px;
+position: relative;
+box-shadow: 2px 2px 20px black;
+transform: scale(1.004);
+}
+
+.updateCard h3{
+margin: 0;
+width: 50%;
+display: inline-block;
+position: absolute;
+top: 50%;
+left:10%;
+transform: translateY(-50%);
+}
+
+.updateVideoList{
+height: 92%;
+/* background-color: #4FBDBA; */
+background-image: linear-gradient(180deg, rgb(0, 33, 65), #00C4FF);
+overflow-y: auto;
+overflow-x: hidden;
+}
+
+.updateVideoList::-webkit-scrollbar {
+  display: none;
+}
+
+#updateViewIcon{
+margin: 0;
+display: inline-block;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+right: 72px;
+background-color: transparent;
+border: none;
+height: 100%;
+width: 8%;
+cursor: pointer;
+}
+
+/* #updateViewIcon:hover{
+margin: 0;
+display: inline-block;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+right: 89px;
+background-color: ;
+border: none;
+height: 100%;
+width: 8%;
+} */ 
+
+#updateViewIcon:hover{
+margin: 0;
+display: inline-block;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+right: 72px;
+border: none;
+height: 100%;
+width: 8%;
+cursor: pointer;
+background-image: linear-gradient(180deg, #38E54D, #1C6758)
+}
+
+
+
+
+/*-----------------------------------------------my content notes-----------------------------------------*/
+
+.MCnoteDiv{
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+}
+
+.MCnoteDivUpper{
+height: 7%;
+position: relative;
+background-color: #B01E68;
+color: #F0F0F0;
+}
+
+.MCnoteDivUpper h2{
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+margin: 0;
+}
+
+.MCnotesArea{
+height: 83.6%;
+background-color: #B01E68;
+}
+
+.MCnoteLowerDiv{
+height: 9.4%;
+position: relative;
+background-color: #B01E68;
+}
+
+.MCnotesUpperButtonContainer{
+right: 0px;
+top: 0px;
+position: absolute;
+}
+
+.MCnotesLowerButtonContainer{
+top: 50%;
+transform: translateY(-50%);
+right: 5%;
+position: absolute;
+height: 100%;
+}
+.MCnotesLowerButtonContainer button{
+margin: 0;
+background-color: transparent;
+border: none;
+outline: none;
+height: 100%;
+width: 60px;
+cursor: pointer;
+}
+.MCnotesLowerButtonContainer button:hover{
+margin: 0;
+background-color: transparent;
+border: none;
+outline: none;
+background-color: white;
+transition: 0.5s;
+height: 100%;
+cursor: pointer;
+}
+
+
+
+
+.MCnoteHeading{
+margin: 0;
+text-align: center;
+}
+
+.txtmycontent{ 
+resize: none;
+height: 100%;
+width: 100%;
+background-color: #EEEEEE;
+border: black;
+border-width: 20px;
+font-size:1em; 
+font-family:"Ubuntu Light","Ubuntu","Ubuntu Mono","Segoe Print","Segoe UI";
+outline: none;
+}
+
+
+.txtmycontent::-webkit-scrollbar {
+display: none;
+}
+
+
+
+
+
+.aboutMainDiv{
+  color: #40514E;
+  margin: 0; 
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+.aboutMainDiv h1{
+  color: #66BFBF;
+  font-size: 5.625em; /* 1em = 100% = 16px => 5.625em = 562.5% = 90px*/
+  font-family: 'Sacramento', cursive;
+  margin-top: 50px;
+}
+.aboutMainDiv h2{
+  color: #66BFBF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem; /*rem resizes compaing with root size and em resizes compaing with parent element size which adds on to it*/
+  font-weight: normal;
+}
+.aboutMainDiv h3{
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.aboutMainDiv p{
+  line-height: 2;
+}
+
+.intro{
+  width: 30%;
+  margin: auto;
+}
+
+#backAboutButton{
+  color:  #11999E;
+  padding: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-width: 2px;
+  border-color: #11999E;
+  cursor: pointer;
+}              
+#backAboutButton:hover{
+  color:  rgb(0, 33, 65);
+  padding: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #11999E;
+  border-width: 2px;
+  border-color: white;
+  cursor: pointer;
+  transition: 0.6s;
+}              
+
+.top-container{
+  background-color: #E4F9F5;
+  height: 8vh;
+  position: relative;
+}
+.middle-container{
+  margin: 100px 0;
+}
+.pro{
+  text-decoration: underline;
+}
+.top-cloud{
+  position: absolute;
+  top: 40px;
+  right: 300px;
+}
+.bottom-cloud{
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+}
+.profile{
+  margin-top: 50px;
+}
+.dp {
+  border-radius: 100%;
+  width: 12%;
+}
+
+.videoEditing{
+  /* width: 25%; */
+  float: left;
+  margin-right: 30px;
+}
+.singing{
+  /* width: 25%; */
+  float: right;
+  margin-left: 30px;
+}
+.skill-row{
+  width: 50%;
+  margin: 100px auto;
+  text-align: left;
+}
+
+.aboutMainDiv hr{
+  width: 4%;
+  border-style: dotted;
+  border-top: none;
+  border-width: 8px;
+  margin: 100px auto;
+  border-color: #EAF6F6;
+}
+.contact-me-h3{
+  margin-bottom: 40px;
+  margin-top: 40px
+}
+.contact-me-p{
+  width: 40%;
+  margin: 40px auto 60px;
+}
+.bottom-container{
+  background-color: #66BFBF;
+  padding-bottom: 30px;
+  margin-top: 60px;
+}
+.footer-link{
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 30px 20px;
+}
+.footer-link:hover{
+  color: #EAF6F6;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 30px 20px;
+}
+.endP{
+  color: #EAF6F6;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 0.75rem;
+}
+
+.btn {
+   background: #11CDD4;
+   background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
+   background-image: -moz-linear-gradient(top, #11CDD4, #11999E);
+   background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
+   background-image: -o-linear-gradient(top, #11CDD4, #11999E);
+   background-image: -webkit-gradient(to bottom, #11CDD4, #11999E);
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   color: #FFFFFF;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 20px;
+   font-weight: 100;
+   padding: 10px 20px;
+   margin-top: 30px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+ 
+.btn:hover {
+   background: #30E3CB;
+   background-image: -webkit-linear-gradient(top, #30E3CB, #2BC4AD);
+   background-image: -moz-linear-gradient(top, #30E3CB, #2BC4AD);
+   background-image: -ms-linear-gradient(top, #30E3CB, #2BC4AD);
+   background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
+   background-image: -webkit-gradient(to bottom, #30E3CB, #2BC4AD);
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8PX;
+   border-radius: 8px;
+   text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* homecard new */
+
+
+.ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+}
+
+.ag-courses_box {
+  /* display: -webkit-box;
+  display: -ms-flexbox; */
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+.ag-courses_item {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+
+  margin: 0 15px 30px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #121212;
+  overflow: hidden;
+  position: relative;
+  text-decoration:none;
+}
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #FFF;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.ag-courses-item_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+  overflow: hidden;
+  
+  font-weight: bold;
+  font-size: 30px;
+  color: #FFF;
+  
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_date-box {
+  font-size: 19px;
+  color: #FFF;
+  z-index: 2;
+  display: flex;
+  position: relative;
+}
+.ag-courses-item_date {
+  font-weight: bold;
+  color: #f9b234;
+  -webkit-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease; 
+}
+
+.homeLikesAndViews{
+  margin: 0 7%;
+}
+
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: #3ecd5e;
+}
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: #e44002;
+}
+.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+  background-color: #952aff;
+}
+.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+  background-color: #cd3e94;
+}
+.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+  background-color: #4c49ea;
+}
+
+
+
+@media only screen and (max-width: 979px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .ag-courses-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+}
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .ag-courses-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .ag-courses-item_link {
+    padding: 22px 40px;
+  }
+  .ag-courses-item_date-box {
+    font-size: 16px;
+  }
+}
